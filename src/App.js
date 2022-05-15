@@ -1,22 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 import {
-  BrowserRouter as Router,
-  Switch,
+  BrowserRouter,
+  Routes,
   Route,
-  Link
 } from "react-router-dom";
 import Homepage from 'pages/Homepage';
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/">
-          <Homepage />
-        </Route>
-      </Switch>
-    </Router>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
